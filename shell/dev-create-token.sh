@@ -1,0 +1,1 @@
+cd prisma && prisma1 token -e ../config/.env.development

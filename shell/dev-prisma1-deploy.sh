@@ -1,0 +1,1 @@
+cd prisma && prisma1 deploy -e ../config/.env.development
