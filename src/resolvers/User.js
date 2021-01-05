@@ -15,9 +15,8 @@ const User = {
   },
   posts: {
     fragment: "fragment userId on User { id }",
-    resolve(parent, _args, { prisma, request }, info) {
+    resolve(_parent, _args, { prisma, request }, info) {
       const userId = getUserId(request);
-      console.log("parent", parent);
       const posts = prisma.query.posts(
         {
           where: {

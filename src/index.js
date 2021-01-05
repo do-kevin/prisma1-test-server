@@ -2,7 +2,6 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { GraphQLServer, PubSub } from "graphql-yoga";
 import prisma from "../src/prisma";
-// import db from "../src/db";
 import { resolvers, fragmentReplacements } from "../src/resolvers";
 
 const pubsub = new PubSub();
@@ -12,7 +11,6 @@ const server = new GraphQLServer({
   resolvers,
   context(request) {
     return {
-      // db,
       pubsub,
       prisma,
       request,

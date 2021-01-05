@@ -1,6 +1,6 @@
 {
-  "name": "graphql-prisma",
-  "version": "1.0.0",
+  "name": "prisma1-test-server",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,6 @@
     "heroku-postbuild": "babel src --out-dir dist --delete-dir-on-start --copy-files",
     "dev": "NODE_ENV=development env-cmd -f config/.env.development nodemon -L --watch src --ext js,graphql --exec 'npm run build && babel-node build/index.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-schema": "graphql-codegen --config ./.graphqlrc.yml",
     "serve": "babel-node build/index.js",
     "dev:prisma1-deploy": "chmod u+x shell/dev-prisma1-deploy.sh && shell/dev-prisma1-deploy.sh",
     "dev:compose-up": "chmod u+x shell/dev-compose-up.sh && shell/dev-compose-up.sh",
@@ -25,10 +24,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.12.10",
-    "@graphql-cli/codegen": "1.17.16",
-    "@graphql-cli/diff": "2.1.0",
-    "@graphql-cli/similar": "2.1.0",
-    "@graphql-codegen/schema-ast": "^1.18.1",
     "babel-preset-env": "^1.7.0",
     "heroku": "^7.47.6",
     "nodemon": "^2.0.6"
@@ -37,11 +32,9 @@
     "node": "12.19.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "bcryptjs": "^2.4.3",
     "core-js": "^3.8.2",
     "env-cmd": "^10.1.0",
-    "find-config": "^1.0.0",
     "graphql-cli": "^4.1.0",
     "graphql-yoga": "^1.18.3",
     "jsonwebtoken": "^8.5.1",
