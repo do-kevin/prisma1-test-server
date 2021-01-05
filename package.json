@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production env-cmd -f config/.env.production node dist/index.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "build": "babel src/index.js -d build",
     "heroku-postbuild": "babel src --out-dir dist --delete-dir-on-start --copy-files",
     "dev": "NODE_ENV=development env-cmd -f config/.env.development nodemon -L --watch src --ext js,graphql --exec 'npm run build && babel-node build/index.js'",
